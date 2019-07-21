@@ -1,5 +1,5 @@
 How to use:
-First - extract datas.rar into C:\ (C:\datas)
+First - extract datas.rar into C:\ (C:\datas).
 Second - Open projects : Rewards/DQL - reinforcement/Actions and run them (every project is individual) - if now working on the first time try to run second time. (in the first time the projects are only resizing images).
 
 Rewards
