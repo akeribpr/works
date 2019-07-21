@@ -192,7 +192,7 @@ def build_states_array():
     ])
     
     # load and resizing the target image
-    im = Image.open('/more/datas/testing/someoneelse/frame5575.bmp')
+    im = Image.open('/datas/alexnetData/someoneelse/frame5575.bmp')
     box = (0,20,600,480)
     im_finally = im.crop(box)
     im_finally_Resize = im_finally.resize((512,512))
@@ -246,6 +246,7 @@ def main():
 #    count_1_total = 0
     results = []
     final_results = []
+    results2 = []
     dqn = DQN()
     s_end = build_states_array()
 
@@ -310,6 +311,7 @@ def main():
                     print('right count ', count_1)
                     results.append(count_0+count_1)
                     final_results.append([count_0,count_1])
+                    results2.append(ite)
 #                    final_results.append([len(y),count_0,count_1])           
 
             if done:
@@ -319,11 +321,13 @@ def main():
             ite+=1
     print('results: left and right count array')
     print(final_results) 
-    x = numpy.arange(len(y))       
+#    x = numpy.arange(len(y))    
+    x = numpy.arange(len(results2)) 
     fig = pyplot.figure()
-    ax = fig.add_subplot(111)
-    ax.set_ylim(0.86,0.92)
-    pyplot.plot(x,y)
+#    ax = fig.add_subplot(111)
+#    ax.set_ylim(0.86,0.92)
+#    pyplot.plot(x,y)
+    pyplot.plot(x,results2)
 #    pyplot.savefig('results/test2.png')
 #    pyplot.savefig('results/test1.png')
     pyplot.show()
