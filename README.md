@@ -1,5 +1,9 @@
-"# model-challenge" 
+How to use:
+First - extract datas.rar into C:\ (C:\datas)
+Open projects : Rewards/DQL - reinforcement/Actions and run them (every project is individual) - if now working on the first time try to run second time. (in the first time the projects are only resizing images).
+
 Rewards
+
 Basiclly , I took  an Alexnet network with pre trained weights, deleted the last layers of the fully connected.
 Now every image that going into the network become a features vector. Then I measured the the distance betwean every frame image (features vector) 
 to the last features vecror which is the last frame (the target frame).
@@ -15,6 +19,8 @@ Then we store the transition (state, next state , action and reward) in order to
 The output is the actions done for every iteration, the count of them for every episode, and the initialfrome index.
 If we run the algorithm multiple times, we can see that the graph of the actions counter is converged.
 Alexnet file here is calculation the reward by the measure of cosine similarity with the alexnet network.
+
+Actions
 
 First I divided two groups of images into two different files (one for frames which condidered to right moves and for left moves)
 Then I resized and croped them.
