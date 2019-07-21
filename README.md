@@ -31,6 +31,6 @@ Then I resized and croped them.
 Then I manipulate  a tranfare learning of Alexnet like I did before to get features vectors of the frames.
 Then I built a network which get an input two features vectors (of the two frames that we consider as a move) and the output of the network
 is two neurons. Then the new network learned the moves. 
-In the learning process I determined that the right move got the weights [0,100] and left move [100,0]. 
+In the learning process I determined that the right move got the output [0,100] and left move [100,0]. 
 
 To run the project - run testActions.py.
